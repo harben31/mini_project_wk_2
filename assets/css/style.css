@@ -1,6 +1,6 @@
 :root {
     --backColor: #313131;
-    --textColor: purple;
+    --textColor: rgb(168, 67, 168);
 
 }
 
@@ -11,8 +11,8 @@ body{
 main {
     background: var(--backColor);
     color: var(--textColor);
-    /* display: flex; */
-    /* flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* justify-items: center; */
     text-align: center;
@@ -21,22 +21,29 @@ main {
 header {
     display: flex;
     flex-direction: column  ;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     text-align: center;
     
 }
 
+h1 {
+    font-size: 200%;
+    margin: 20px 0;
+}
+
 header p {
+    color: white;
     margin: 0 auto;
+    line-height: 1.5;
     width: 70%;
 }
 
 .cardContainer {
-    align-content: space-between;
+    /* align-content: space-between; */
     background: var(--backColor);
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    /* justify-content: center; */
 }
 
 .card {
@@ -46,23 +53,34 @@ header p {
     flex: 1 1 300px;
     flex-direction: column;
     height: 40vh;
-    justify-content: space-around;
+    justify-content: center;
     margin: 40px;
+    height:fit-content;
 }
 
 .card header{
     background: var(--backColor);
     border: 2px solid lightgray;
-    border-radius: 20px;
-    left: 7%;
+    border-radius: 7px;
+    display: block;
+    /* left: 6%; */
+    margin: 0 auto;
+    padding: 10px 5px;
+    /* justify-self: center; */
     position: relative;
-    top: -10%;
-    width: 85%;
+    top: -40px;
+     
+    width: 88%;
     z-index: 1;
+} 
+
+.card header h3 {
+    font-size: 175%;    
 }
 
 .card > p{
-margin: -4% 0 2% 0;
+margin: -4% 0 5% 0;
+padding: 0 5px;
 }
 
 .inCardContainer p {
@@ -71,15 +89,55 @@ margin: -4% 0 2% 0;
 
 .inCardContainer {    
     align-items: center;
-    background-image: linear-gradient(
-        rgba(010, 010, 010, 0.5) 0%,
-        rgba(199, 50, 186, 0.5) 100%
-        );
+    /* background-image: linear-gradient(
+        rgba(010, 010, 010, 0.1) ,
+        rgba(168, 67, 168, 1)
+        ); */
+    background: var(--textColor);
     border-radius: 10px;
+    box-shadow: inset 0 20px 40px rgba(0, 0, 0, 0.5);
     color:rgb(185, 185, 185);
     display:flex;
     flex: 1 1 250px; 
     font-family: monospace;
+    /* height:min-content; */
     margin: 0% 4% 4% 4%;
-    line-height: 2;
+    line-height: 3;
+}
+
+footer {
+    
+    height: 100px;
+    
+}
+
+footer h3 {
+    position: relative;
+    top: 45%;
+}
+
+#heart::after{
+    content: " ❤️"
+}
+
+@media screen and (max-width: 768px){
+    /* main {
+         background:crimson
+    } */
+
+    .card {
+    
+         flex: 1 1 200px;
+    }
+}
+
+@media screen and (max-width: 590px){
+    /* main {
+        background:chartreuse;
+    } */
+
+    .card {
+        flex: 1 1 300px;
+    }
+    
 }
