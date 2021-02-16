@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -18,94 +18,117 @@
         <section class="cardContainer">
 
             <article class="card">
-                <header>
-                    <h3>Flexbox Row</h3>
-                </header>
-                <p>Use these three properties to create a Flexbox Row layout</p>
-                <div class="inCardContainer">
-                    <p>.row {
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: wrap;
-                    
-                    </p>
-                </div>
+                <figure>
+                    <header>
+                        <h3>Flexbox Row</h3>
+                    </header>
+                    <div class="pWrap">
+                        <p>Use these three properties to create a Flexbox Row layout</p>
+                    </div>
+                    <!-- <div class="inCardContainer"> -->
+                    <pre class ="codeBlock">.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}</pre>  
+                    <!-- </div> -->
+                </figure>
+            </article>
+
+            <article class="card">
+                <figure>
+                    <header>
+                        <h3>Flexbox Column</h3>
+                    </header>
+                    <div class="pWrap">
+                        <p>Use this to create a Flexbox Column layout</p>
+                    </div>
+                    <!-- <div class="inCardContainer"> -->
+                    <pre class ="codeBlock">.row {
+    display: flex;
+    flex-direction: column;
+}</pre>
+                    <!-- </div> -->
+                </figure>
+            </article>
+
+            <article class="card">
+                <figure>
+                    <header>
+                        <h3>CSS Grid layout</h3>
+                    </header>
+                    <div class="pWrap">
+                        <p>Build a twelve-column layout using CSS Grid</p>
+                    </div>
+                    <!-- <div class="inCardContainer"> -->
+                    <pre class ="codeBlock">.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat (12, 1fr);
+}</pre>
+                    <!-- </div> -->
+                </figure>
             </article>
             <article class="card">
-                <header>
-                    <h3>Flexbox Column</h3>
-                </header>
-                <p>Use this to create a Flexbox Column layout</p>
-                <div class="inCardContainer">
-                    <p>.row {
-                        display: flex;
-                        flex-direction: column;
-                }
-                    </p>
-                </div>
+                <figure>
+                    <header>
+                        <h3>Linear Gradients</h3>
+                    </header>
+                    <div class="pWrap">
+                        <p>This will create a linear gradient from top to bottom</p>
+                    </div>
+                    <!-- <div class="inCardContainer"> -->
+                    <pre class ="codeBlock">.linear-gradient-background {
+    background-image: linear-gradient
+        (
+        rgba(232, 102, 236, 0.3) 0%,
+        rgba(232, 102, 236, 0.6) 100%
+    );
+}</pre>
+                    <!-- </div> -->
+                </figure>
             </article>
+
             <article class="card">
-                <header>
-                    <h3>CSS Grid layout</h3>
-                </header>
-                <p>Build a twelve-column layout using CSS Grid</p>
-                <div class="inCardContainer">
-                    <p>.grid {
-                        display: grid;
-                        width: 100%;
-                        grid-template-columns: repeat (12, 1fr);
-                    }
-                    </p>
-                </div>
+                <figure>
+                    <header>
+                        <h3>Box Transition Glow</h3>
+                    </header>
+                    <div class="pWrap">
+                        <p>Use transitions and box shadows to glow on hover</p>
+                    </div>
+                    <!-- <div class="inCardContainer"> -->
+                    <pre class ="codeBlock">.code .code-card {
+    border-radius: 8px;
+    transition: all 0.5% ease-in-out;
+}
+.code-card:hover, .code-card:hover, .card-header {
+    box-shadow: inset 0px 0px 8px
+    rgba(232, 102, 236, 1)
+    rgba(232, 102, 236, 1);
+}</pre>
+                    <!-- </div> -->
+                </figure>
             </article>
+
             <article class="card">
-                <header>
-                    <h3>Linear Gradients</h3>
-                </header>
-                <p>This will create a linear gradient from top to bottom</p>
-                <div class="inCardContainer">
-                    <p>.linear-gradient-background {
-                        background-image: linear-gradient(
-                            rgba(232, 102, 236, 0.3) 0%,
-                            rgba(232, 102, 236, 0.6) 100%
-                        );
-                    }
+                <figure>
+                    <header>
+                        <h3>Overlay card with title</h3>
+                    </header>
+                    <div class="pWrap">
+                        <p>Use position properties and negative margins to 
+                        raise elements higher than their natural starting
+                        point.
                     </p>
-                </div>
-            </article>
-            <article class="card">
-                <header>
-                    <h3>Box Transition Glow</h3>
-                </header>
-                <p>Use transitions and box shadows to glow on hover</p>
-                <div class="inCardContainer">
-                    <p>.code .code-card {
-                        border-radius: 8px;
-                        transition: all 0.5% ease-in-out;
-                    }
-                        .code-card:hover, .code-card:hover, .card-header {
-                            box-shadow: inset 0px 0px 8px
-                            rgba(232, 102, 236, 1)
-                            rgba(232, 102, 236, 1);
-                        }
-                    </p>
-                </div>
-            </article>
-            <article class="card">
-                <header>
-                    <h3>Overlay card with title</h3>
-                </header>
-                <p>Use position properties and negative margins to 
-                    raise elements higher than their natural starting
-                    point.
-                </p>
-                <div class="inCardContainer">
-                    <p>.card-header {
-                        position: relative;
-                        margin-top: -20px;
-                    }
-                    </p>
-                </div>
+                    </div>
+                    <!-- <div class="inCardContainer"> -->
+                    <pre class ="codeBlock">.card-header {
+    position: relative;
+    margin-top: -20px;
+}</pre>
+                    <!-- </div> -->
+                </figure>
             </article>
         </section>
         <footer>
